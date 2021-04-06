@@ -6,25 +6,24 @@ using TMPro;
 public class StatusManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _life;
-    [SerializeField] private SpriteRenderer sprPlayer;
-    [SerializeField] private Sprite spr;
+    [SerializeField] private SpriteRenderer _sprPlayer;
+    [SerializeField] private Sprite _spr;
 
-    private string a = "";
-
-    public void ChangeLife(TextMeshProUGUI _input)
+    public void ChangeLife(TMP_InputField _input)
     {
         _life.text = _input.text;
-        a = _input.text.ToString();
 
-        if (a == "0")
+        int checkLife;
+        checkLife = int.Parse(_life.text);
+
+        if (checkLife.Equals(0))
         {
-            Debug.Log(a);
             ChangeSprite();
         }
     }
 
     private void ChangeSprite()
     {
-        sprPlayer.sprite = spr;
+        _sprPlayer.sprite = _spr;
     }
 }

@@ -36,21 +36,21 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Tab) && !editMode)
+        {
+            cursorChaser.SetActive(true);
+            addObjects.SetActive(true);
+            editMode = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Tab) && editMode)
+        {
+            cursorChaser.SetActive(false);
+            addObjects.SetActive(false);
+            editMode = false;
+        }
+
         if (!isPaused)
         {
-            if (Input.GetKeyDown(KeyCode.Tab) && !editMode)
-            {
-                cursorChaser.SetActive(true);
-                addObjects.SetActive(true);
-                editMode = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.Tab) && editMode)
-            {
-                cursorChaser.SetActive(false);
-                addObjects.SetActive(false);
-                editMode = false;
-            }
-
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 if (count < a.Length - 1)

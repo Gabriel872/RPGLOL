@@ -9,9 +9,18 @@ public class AddObject : MonoBehaviour
 
     [Space]
     [Space]
+
     [SerializeField] private List<Sprite> _spriteList;
 
-    private int value;
+    private int value = 0;
+
+    private void Start()
+    {
+        if (sprCursorChaser != null)
+        {
+            sprCursorChaser.sprite = _spriteList[value];
+        }
+    }
 
     private void FixedUpdate()
     {
