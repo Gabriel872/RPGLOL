@@ -21,7 +21,7 @@ public class GridManager : MonoBehaviour
         {
             for (int i = 0; i < rows; i++)
             {
-                Instantiate(preFab, new Vector3(transform.position.x + 0.5f + j, transform.position.y + 0.5f - i, transform.position.z +2f), Quaternion.identity, gameObject.transform);
+                //Instantiate(preFab, new Vector3(transform.position.x + 0.5f + j, transform.position.y + 0.5f - i, transform.position.z +2f), Quaternion.identity, gameObject.transform);
             }
         }
     }

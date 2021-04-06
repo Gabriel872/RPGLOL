@@ -12,13 +12,12 @@ public class AddObject : MonoBehaviour
     [SerializeField] private List<Sprite> _spriteList;
 
     private int value;
-    private void Update()
+
+    private void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButton(1))
         {
-            Transform img = Instantiate(_objectSprite, new Vector3(Mathf.RoundToInt(GetMousePosition().x), Mathf.RoundToInt(GetMousePosition().y), GetMousePosition().z), Quaternion.identity);
-            img.GetComponent<SpriteRenderer>().sprite = _spriteList[value];
-            img.gameObject.AddComponent<PolygonCollider2D>();
+            Add();
         }
 
         if (Input.GetMouseButtonDown(2))
@@ -36,6 +35,13 @@ public class AddObject : MonoBehaviour
                 sprCursorChaser.sprite = _spriteList[value];
             }
         }
+    }
+
+    private void Add()
+    {
+        Transform img = Instantiate(_objectSprite, new Vector3(Mathf.RoundToInt(GetMousePosition().x), Mathf.RoundToInt(GetMousePosition().y), GetMousePosition().z), Quaternion.identity);
+        img.GetComponent<SpriteRenderer>().sprite = _spriteList[value];
+        img.gameObject.AddComponent<PolygonCollider2D>();
     }
 
     private Vector3 GetMousePosition()

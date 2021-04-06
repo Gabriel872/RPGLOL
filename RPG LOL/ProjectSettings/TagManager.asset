@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - player
-  - 
+  - cima
   - 
   - 
   - 
@@ -40,4 +40,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ground
+    uniqueID: 272457277
+    locked: 0
+  - name: groundUp
+    uniqueID: 2017054523
+    locked: 0
+  - name: environment
+    uniqueID: 4096480141
+    locked: 0
+  - name: objects
+    uniqueID: 3775882343
+    locked: 0
+  - name: NPC
+    uniqueID: 4110908171
+    locked: 0
+  - name: Player
+    uniqueID: 1554074751
+    locked: 0
+  - name: UI
+    uniqueID: 1795689361
     locked: 0

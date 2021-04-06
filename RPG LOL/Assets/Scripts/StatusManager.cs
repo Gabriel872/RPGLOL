@@ -8,15 +8,17 @@ public class StatusManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _life;
     [SerializeField] private SpriteRenderer sprPlayer;
     [SerializeField] private Sprite spr;
- 
+
+    private string a = "";
+
     public void ChangeLife(TextMeshProUGUI _input)
     {
         _life.text = _input.text;
-        string a = _input.text;
+        a = _input.text.ToString();
 
-        int.TryParse(a, out int b);
-        if (b.Equals(0))
+        if (a == "0")
         {
+            Debug.Log(a);
             ChangeSprite();
         }
     }

@@ -23,19 +23,9 @@ public class FunctionBar : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.KeypadMinus))
-        {
-            DecreaseLife();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Equals) || Input.GetKeyDown(KeyCode.KeypadPlus))
-        {
-            AddLife();
-        }
-
         if (Input.GetKeyDown(KeyCode.Keypad7))
         {
-            ChangeColor();
+            ChangeSprite();
         }
     }
 
@@ -126,8 +116,8 @@ public class FunctionBar : MonoBehaviour
     }
     #endregion
 
-    #region ChangeColor
-    public void ChangeColor()
+    #region ChangeSprite
+    public void ChangeSprite()
     {
         if(counter < (_sprNPC.Count - 1))
         {
