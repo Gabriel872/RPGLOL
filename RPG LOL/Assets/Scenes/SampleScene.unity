@@ -901,7 +901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &387033442
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7200,10 +7200,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1614073047}
     m_Modifications:
+    - target: {fileID: 3033027697772572958, guid: a93849c0cdf3a3b45a0ee571dcf11dbd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3033027698601083520, guid: a93849c0cdf3a3b45a0ee571dcf11dbd, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1533855087}
+    - target: {fileID: 3033027698601083520, guid: a93849c0cdf3a3b45a0ee571dcf11dbd, type: 3}
+      propertyPath: m_CaretBlinkRate
+      value: 0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 3033027698982298794, guid: a93849c0cdf3a3b45a0ee571dcf11dbd, type: 3}
       propertyPath: m_Name
       value: Korphurat
@@ -7296,10 +7304,6 @@ PrefabInstance:
       propertyPath: _sprPlayer
       value: 
       objectReference: {fileID: 184081503}
-    - target: {fileID: 3033027699015089077, guid: a93849c0cdf3a3b45a0ee571dcf11dbd, type: 3}
-      propertyPath: _spr
-      value: 
-      objectReference: {fileID: -7204090467120934089, guid: 682cbb2c84bde2f4b9b04c6a08b6d1e1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a93849c0cdf3a3b45a0ee571dcf11dbd, type: 3}
 --- !u!1001 &3939229727423856015
