@@ -60,5 +60,4 @@ public class MoveObject : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         return Camera.main.ScreenToWorldPoint(mousePos);
     }
-
 }

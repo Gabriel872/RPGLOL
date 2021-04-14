@@ -128,17 +128,20 @@ public class FunctionBar : MonoBehaviour
             counter = 0;
         }
 
-        if(counter == 0)
+        switch (counter)
         {
-            _objectSelected.spr.sprite = _sprNPC[0];
-        }
-        else if(counter == 1)
-        {
-            _objectSelected.spr.sprite = _sprNPC[1];
-        }
-        else if(counter == 2)
-        {
-            _objectSelected.spr.sprite = _sprNPC[2];
+            case 0:
+                _objectSelected.spr.sprite = _sprNPC[0];
+                break;
+            case 1:
+                _objectSelected.spr.sprite = _sprNPC[1];
+                break;
+            case 2:
+                _objectSelected.spr.sprite = _sprNPC[2];
+                break;
+            default:
+                Debug.LogError("erro_spr");
+                break;
         }
     }
     #endregion

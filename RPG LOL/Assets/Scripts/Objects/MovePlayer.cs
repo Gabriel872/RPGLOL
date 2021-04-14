@@ -37,7 +37,7 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
-    private void OnMouseDrag()
+    private void OnMouseOver()
     {
         if (canMove)
         {
@@ -45,7 +45,14 @@ public class MovePlayer : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.R))
             {
-                sprR.sprite = spr;
+                if (sprR.sprite.Equals(spr))
+                {
+                    return;
+                }
+                else
+                {
+                    sprR.sprite = spr;
+                }
             }
         }
     }
