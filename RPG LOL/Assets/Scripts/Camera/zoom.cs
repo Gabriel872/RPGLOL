@@ -15,7 +15,7 @@ public class zoom : MonoBehaviour
     {
         if (GM.isPaused == false)
         {
-            if (Input.mouseScrollDelta.y < 0 && cam.orthographicSize < 10)
+            if (Input.mouseScrollDelta.y < 0 && cam.orthographicSize < 12)
             {
                 cam.orthographicSize += 30 * Time.deltaTime;
             }

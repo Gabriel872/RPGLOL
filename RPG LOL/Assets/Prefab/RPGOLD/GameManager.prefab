@@ -43,4 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44d010cadb8b0a439c813132c062f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorChaser: {fileID: 0}
+  addObjects: {fileID: 0}
   isPaused: 0
+  editMode: 0
+  a:
+  - Player
+  - NPC
+  - objects
+  layer: 

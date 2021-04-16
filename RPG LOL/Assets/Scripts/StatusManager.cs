@@ -6,15 +6,15 @@ using TMPro;
 public class StatusManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _life;
-    [SerializeField] private TMP_InputField _textInput;
-    [SerializeField] private SpriteRenderer _sprPlayer;
-    [SerializeField] private Sprite _spr;
+    [SerializeField] private TMP_InputField _lifeInput;
+    [SerializeField] private SpriteRenderer _spriteRendPlayer;
+    [SerializeField] private Sprite _deathSprite;
 
     public void SetNull()
     {
         _life.text = "";
-        _textInput.text = "";
-        _textInput.Select();
+        _lifeInput.text = "";
+        _lifeInput.Select();
     }
 
     public void ChangeLife(TMP_InputField _input)
@@ -32,6 +32,6 @@ public class StatusManager : MonoBehaviour
 
     private void ChangeSprite()
     {
-        _sprPlayer.sprite = _spr;
+        _spriteRendPlayer.sprite = _deathSprite;
     }
 }

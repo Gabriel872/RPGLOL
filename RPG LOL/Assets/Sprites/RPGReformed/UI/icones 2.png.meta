@@ -1,19 +1,37 @@
 fileFormatVersion: 2
-guid: 02712011c63555140b9df6bfe25acf50
+guid: b2c90fe1e1daa244d99faffcc01bf18b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6954434930569146630
-    second: UI_players_background_0
+      213: 3370856629808705632
+    second: icones 2_0
   - first:
-      213: 8180097221443091923
-    second: UI_players_background_1
+      213: 615891484661782494
+    second: icones 2_1
   - first:
-      213: -1275087183783074571
-    second: UI_players_background_2
+      213: 5280936151368480580
+    second: icones 2_2
   - first:
-      213: -7037712415458324864
-    second: UI_players_background_3
+      213: 6512642051214090816
+    second: icones 2_3
+  - first:
+      213: 3807590734368354813
+    second: icones 2_4
+  - first:
+      213: 6775020234955822474
+    second: icones 2_5
+  - first:
+      213: 943810269596444941
+    second: icones 2_6
+  - first:
+      213: -7449943795783961816
+    second: icones 2_7
+  - first:
+      213: 4504011226250942980
+    second: icones 2_8
+  - first:
+      213: 176732915635195049
+    second: icones 2_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_players_background_0
+      name: icones 2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 1
+        y: 52
+        width: 11
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afe8bddd642ec7f90800000000000000
-      internalID: -6954434930569146630
+      spriteID: 060b488ce30b7ce20800000000000000
+      internalID: 3370856629808705632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_players_background_1
+      name: icones 2_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 19
+        y: 52
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,20 +166,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dd7648351b858170800000000000000
-      internalID: 8180097221443091923
+      spriteID: ed7147bca061c8800800000000000000
+      internalID: 615891484661782494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_players_background_2
+      name: icones 2_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 49
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44736d73377a94940800000000000000
+      internalID: 5280936151368480580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icones 2_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 33
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8510a21205b50e50800000000000000
+      internalID: 6775020234955822474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icones 2_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 33
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0969ae8076191d00800000000000000
+      internalID: 943810269596444941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icones 2_7
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
-        width: 16
-        height: 16
+        y: 36
+        width: 12
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f4e4f846fafd4ee0800000000000000
-      internalID: -1275087183783074571
+      spriteID: 823fba7d69b7c9890800000000000000
+      internalID: -7449943795783961816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_players_background_3
+      name: icones 2_8
       rect:
         serializedVersion: 2
         x: 48
-        y: 0
-        width: 16
-        height: 16
+        y: 37
+        width: 10
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +271,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08e004578d5055e90800000000000000
-      internalID: -7037712415458324864
+      spriteID: 40a1f05d856718e30800000000000000
+      internalID: 4504011226250942980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icones 2_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 25
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac0e8086a1e37200800000000000000
+      internalID: 176732915635195049
       vertices: []
       indices: 
       edges: []

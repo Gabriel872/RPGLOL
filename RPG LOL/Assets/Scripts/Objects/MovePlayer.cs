@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MovePlayer : MonoBehaviour
 {
     [SerializeField] private Sprite spr;
+    [SerializeField] private TextMeshProUGUI _lifePlayer;
 
     private SpriteRenderer sprR;
 
@@ -37,12 +39,18 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
-    private void OnMouseOver()
+    private void OnMouseDrag()
     {
         if (canMove)
         {
             transform.position = new Vector2(Mathf.RoundToInt(GetMousePosition().x + mOffSet.x), Mathf.RoundToInt(GetMousePosition().y + mOffSet.y));
+        }
+    }
 
+    private void OnMouseOver()
+    {
+        if (canMove)
+        {
             if (Input.GetKeyDown(KeyCode.R))
             {
                 if (sprR.sprite.Equals(spr))
@@ -51,6 +59,7 @@ public class MovePlayer : MonoBehaviour
                 }
                 else
                 {
+                    _lifePlayer.text = "1";
                     sprR.sprite = spr;
                 }
             }

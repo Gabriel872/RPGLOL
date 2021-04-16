@@ -28,7 +28,6 @@ public class AddObject : MonoBehaviour
         {
             Add();
         }
-
         if (Input.GetMouseButtonDown(2))
         {
             if (value >= (_spriteList.Count - 1))

@@ -538,7 +538,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 3033027698601083523, guid: a93849c0cdf3a3b45a0ee571dcf11dbd, type: 3}
+  m_TargetGraphic: {fileID: 0}
   m_TextViewport: {fileID: 3033027697714848352}
   m_TextComponent: {fileID: 3033027697772572960}
   m_Placeholder: {fileID: 0}
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.7568628, g: 0.14901961, b: 0.3019608, a: 0}
   m_Text: 
-  m_CaretBlinkRate: 1
+  m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
@@ -857,7 +857,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1649736804516412609, guid: c449765c88c93c2479d995ab29ff648c, type: 3}
+  m_Sprite: {fileID: -7449943795783961816, guid: b2c90fe1e1daa244d99faffcc01bf18b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

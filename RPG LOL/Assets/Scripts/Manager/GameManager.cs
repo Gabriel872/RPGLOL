@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             editMode = false;
         }
 
-        if (!isPaused)
+        if (isPaused == false)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
@@ -71,14 +71,14 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         Debug.Log("Pause");
-        isPaused = true;
+        this.isPaused = true;
         Time.timeScale = 0f;
     }
 
     public void Resume()
     {
         Debug.Log("Resume");
-        isPaused = false;
+        this.isPaused = false;
         Time.timeScale = 1f;
     }
 }
