@@ -13,9 +13,14 @@ public class AddObject : MonoBehaviour
     [SerializeField] private List<Sprite> _spriteList;
 
     private int value = 0;
+    private Vector3 previousPosition = new Vector3();
+    private Vector3 mousePos;
+    private int sortingLayer;
 
     private void Start()
     {
+        previousPosition = new Vector3(0f, 0f, 0f);
+
         if (sprCursorChaser != null)
         {
             sprCursorChaser.sprite = _spriteList[value];
@@ -28,6 +33,12 @@ public class AddObject : MonoBehaviour
         {
             Add();
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            sortingLayer++;
+        }
+
         if (Input.GetMouseButtonDown(2))
         {
             if (value >= (_spriteList.Count - 1))
@@ -47,9 +58,15 @@ public class AddObject : MonoBehaviour
 
     private void Add()
     {
-        Transform img = Instantiate(_objectSprite, new Vector3(Mathf.RoundToInt(GetMousePosition().x), Mathf.RoundToInt(GetMousePosition().y), GetMousePosition().z), Quaternion.identity);
-        img.GetComponent<SpriteRenderer>().sprite = _spriteList[value];
-        img.gameObject.AddComponent<PolygonCollider2D>();
+        mousePos = new Vector3(Mathf.RoundToInt(GetMousePosition().x), Mathf.RoundToInt(GetMousePosition().y), GetMousePosition().z);
+
+        if (mousePos != previousPosition)
+        {
+            previousPosition = mousePos;
+            Transform img = Instantiate(_objectSprite, mousePos, Quaternion.identity);
+            img.GetComponent<SpriteRenderer>().sprite = _spriteList[value];
+            img.gameObject.AddComponent<PolygonCollider2D>();
+        }
     }
 
     private Vector3 GetMousePosition()

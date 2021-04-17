@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
     public string layer;
 
     private int count = 0;
+
+    [SerializeField] TextMeshProUGUI _actualLayer;
 
     private void Start()
     {
@@ -63,7 +66,7 @@ public class GameManager : MonoBehaviour
                 }
 
                 layer = a[count];
-                Debug.Log(layer);
+                _actualLayer.text = ("Layer: " + layer);
             }
         }
     }
@@ -71,14 +74,14 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         Debug.Log("Pause");
-        this.isPaused = true;
+        instance.isPaused = true;
         Time.timeScale = 0f;
     }
 
     public void Resume()
     {
         Debug.Log("Resume");
-        this.isPaused = false;
+        instance.isPaused = false;
         Time.timeScale = 1f;
     }
 }
