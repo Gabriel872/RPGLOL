@@ -25,7 +25,7 @@ public class zoom : MonoBehaviour
                 cam.orthographicSize -= 30 * Time.deltaTime;
             }
 
-            if (Input.GetKeyDown(KeyCode.Keypad3))
+            if (Input.GetKeyDown(KeyCode.O))
             {
                 cam.orthographicSize = 5;
             }

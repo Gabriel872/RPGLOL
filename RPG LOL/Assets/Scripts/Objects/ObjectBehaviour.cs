@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class ObjectBehaviour : MonoBehaviour
 {
+    private int _sprRen;
     private Vector3 mOffSet;
-
+    
     private bool canMove;
+
+    private void Start()
+    {
+        _sprRen = GetComponent<SpriteRenderer>().sortingOrder;
+    }
 
     private void Update()
     {
-        if (GameManager.instance.layer.Equals("objects"))
+        if (GameManager.instance.layer.Equals("objects") && GameManager.instance.sortingLayer.Equals(_sprRen))
         {
             canMove = true;
         }

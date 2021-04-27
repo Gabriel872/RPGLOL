@@ -43,6 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44d010cadb8b0a439c813132c062f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _positionLayer: {fileID: 0}
+  _actualLayer: {fileID: 0}
+  _controlPanel: {fileID: 0}
   cursorChaser: {fileID: 0}
   addObjects: {fileID: 0}
   isPaused: 0
@@ -52,3 +55,4 @@ MonoBehaviour:
   - NPC
   - objects
   layer: 
+  sortingLayer: 0

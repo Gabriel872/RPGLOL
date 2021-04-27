@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [SerializeField] TextMeshProUGUI _positionLayer;
+    [SerializeField] TextMeshProUGUI _actualLayer;
+    [SerializeField] private GameObject _controlPanel;
+
     public GameObject cursorChaser;
     public GameObject addObjects;
 
@@ -16,9 +20,9 @@ public class GameManager : MonoBehaviour
     public string[] a = new string[3];
     public string layer;
 
+    public int sortingLayer = 0;
     private int count = 0;
 
-    [SerializeField] TextMeshProUGUI _actualLayer;
 
     private void Start()
     {
@@ -31,14 +35,16 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        Screen.fullScreen = false;
         layer = a[0];
+        _actualLayer.text = ("Layer: " + layer);
+        _positionLayer.text = ("Posição: " + sortingLayer);
 
         DontDestroyOnLoad(instance);
     }
 
     private void Update()
     {
+        #region EditorMode
         if (Input.GetKeyDown(KeyCode.Tab) && !editMode)
         {
             cursorChaser.SetActive(true);
@@ -51,7 +57,9 @@ public class GameManager : MonoBehaviour
             addObjects.SetActive(false);
             editMode = false;
         }
+        #endregion
 
+        #region Camada e ordem
         if (isPaused == false)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -68,6 +76,33 @@ public class GameManager : MonoBehaviour
                 layer = a[count];
                 _actualLayer.text = ("Layer: " + layer);
             }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                sortingLayer++;
+                _positionLayer.text = ("Posição: " + sortingLayer);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                sortingLayer--;
+                _positionLayer.text = ("Posição: " + sortingLayer);
+            }
+        }
+        #endregion
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (instance.isPaused)
+            {
+                Resume();
+                _controlPanel.SetActive(false);
+            }
+            else
+            {
+                PauseGame();
+                _controlPanel.SetActive(true);
+            }
         }
     }
 
@@ -83,5 +118,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("Resume");
         instance.isPaused = false;
         Time.timeScale = 1f;
+    }
+
+    public void quitApp()
+    {
+        Application.Quit();
     }
 }

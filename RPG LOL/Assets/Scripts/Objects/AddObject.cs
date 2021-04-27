@@ -39,7 +39,7 @@ public class AddObject : MonoBehaviour
             sortingLayer++;
         }
 
-        if (Input.GetMouseButtonDown(2))
+        if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             if (value >= (_spriteList.Count - 1))
             {
@@ -48,6 +48,22 @@ public class AddObject : MonoBehaviour
             else
             {
                 value++;
+            }
+            if (sprCursorChaser != null)
+            {
+                sprCursorChaser.sprite = _spriteList[value];
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            if (value < 1)
+            {
+                value = 10;
+            }
+            else
+            {
+                value--;
             }
             if (sprCursorChaser != null)
             {
@@ -64,6 +80,7 @@ public class AddObject : MonoBehaviour
         {
             previousPosition = mousePos;
             Transform img = Instantiate(_objectSprite, mousePos, Quaternion.identity);
+            img.GetComponent<SpriteRenderer>().sortingOrder = GameManager.instance.sortingLayer;
             img.GetComponent<SpriteRenderer>().sprite = _spriteList[value];
             img.gameObject.AddComponent<PolygonCollider2D>();
         }
@@ -73,7 +90,6 @@ public class AddObject : MonoBehaviour
     {
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 10;
-        Debug.Log(Camera.main.ScreenToWorldPoint(mousePos));
         return Camera.main.ScreenToWorldPoint(mousePos);
     }
 }

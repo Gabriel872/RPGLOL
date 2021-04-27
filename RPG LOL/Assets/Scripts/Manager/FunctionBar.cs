@@ -23,7 +23,7 @@ public class FunctionBar : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad1))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             ChangeSprite();
         }
