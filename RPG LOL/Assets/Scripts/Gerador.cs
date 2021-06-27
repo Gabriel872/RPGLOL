@@ -19,7 +19,7 @@ public class Gerador : MonoBehaviour
 
         if (GM.isPaused == false)
         {
-            if (Input.GetKeyDown(KeyCode.U))
+            if (Input.GetKeyDown(KeyCode.C))
             {
                 SpawnBox();
             }

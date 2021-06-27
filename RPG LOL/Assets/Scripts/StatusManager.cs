@@ -32,6 +32,11 @@ public class StatusManager : MonoBehaviour
 
     private void ChangeSprite()
     {
+        if(_deathSprite == null)
+        {
+            return;
+        }
+
         _spriteRendPlayer.sprite = _deathSprite;
     }
 }

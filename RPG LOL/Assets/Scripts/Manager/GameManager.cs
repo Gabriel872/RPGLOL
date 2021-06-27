@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
     public bool editMode;
 
-    public string[] a = new string[3];
+    public string[] a = new string[2];
     public string layer;
 
     public int sortingLayer = 0;

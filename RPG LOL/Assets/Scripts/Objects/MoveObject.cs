@@ -23,7 +23,7 @@ public class MoveObject : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance.layer.Equals("NPC"))
+        if (GameManager.instance.layer.Equals("Player"))
         {
             canMove = true;
         }

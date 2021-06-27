@@ -51,7 +51,7 @@ public class MovePlayer : MonoBehaviour
     {
         if (canMove)
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 if (sprR.sprite.Equals(spr))
                 {
