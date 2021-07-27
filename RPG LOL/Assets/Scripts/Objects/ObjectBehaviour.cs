@@ -6,7 +6,9 @@ public class ObjectBehaviour : MonoBehaviour
 {
     private int _sprRen;
     private Vector3 mOffSet;
-    
+
+    [SerializeField] private AddObject other;
+
     private bool canMove;
 
     private void Start()
@@ -38,6 +40,12 @@ public class ObjectBehaviour : MonoBehaviour
     {
         if (canMove)
         {
+            if(GameObject.Find("AddObjectManager"))
+            {
+                other = GameObject.Find("AddObjectManager").GetComponent<AddObject>();
+                other.Substitui(this.gameObject);
+            }
+
             if (Input.GetKeyDown(KeyCode.R))
             {
                 transform.eulerAngles = new Vector3(0f, 0f, transform.eulerAngles.z + 90f);
@@ -53,7 +61,7 @@ public class ObjectBehaviour : MonoBehaviour
                 transform.GetComponent<SpriteRenderer>().sortingOrder--;
             }
 
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetKey(KeyCode.T))
             {
                 Destroy(this.gameObject);
             }

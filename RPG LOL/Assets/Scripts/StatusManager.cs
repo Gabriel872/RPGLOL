@@ -21,10 +21,9 @@ public class StatusManager : MonoBehaviour
     {
         _life.text = _input.text;
 
-        int checkLife;
-        checkLife = int.Parse(_life.text);
+        int life = int.Parse(_life.text);
 
-        if (checkLife.Equals(0))
+        if (life <= 0)
         {
             ChangeSprite();
         }
@@ -32,7 +31,7 @@ public class StatusManager : MonoBehaviour
 
     private void ChangeSprite()
     {
-        if(_deathSprite == null)
+        if (_deathSprite == null)
         {
             return;
         }

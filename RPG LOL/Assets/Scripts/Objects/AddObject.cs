@@ -12,10 +12,14 @@ public class AddObject : MonoBehaviour
 
     [SerializeField] private List<Sprite> _spriteList;
 
+    public bool subs;
+
     private int value = 0;
     private Vector3 previousPosition = new Vector3();
     private Vector3 mousePos;
     private int sortingLayer;
+    private string _addLayer;
+    private GameObject subsObj;
 
     private void Start()
     {
@@ -27,9 +31,11 @@ public class AddObject : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (Input.GetMouseButton(1))
+        _addLayer = GameManager.instance.layer;
+
+        if (Input.GetMouseButton(1) && _addLayer.Equals("objects"))
         {
             Add();
         }
@@ -76,7 +82,7 @@ public class AddObject : MonoBehaviour
     {
         mousePos = new Vector3(Mathf.RoundToInt(GetMousePosition().x), Mathf.RoundToInt(GetMousePosition().y), GetMousePosition().z);
 
-        if (mousePos != previousPosition)
+        if (mousePos != previousPosition && !subs)
         {
             previousPosition = mousePos;
             Transform img = Instantiate(_objectSprite, mousePos, Quaternion.identity);
@@ -84,6 +90,15 @@ public class AddObject : MonoBehaviour
             img.GetComponent<SpriteRenderer>().sprite = _spriteList[value];
             img.gameObject.AddComponent<PolygonCollider2D>();
         }
+        else if (subs && subsObj != null) 
+        {
+            if (subsObj.GetComponent<SpriteRenderer>().sortingOrder.Equals(GameManager.instance.sortingLayer)) 
+            { 
+                subsObj.GetComponent<SpriteRenderer>().sprite = _spriteList[value];        
+            }
+        }
+
+        subs = false;
     }
 
     private Vector3 GetMousePosition()
@@ -91,5 +106,11 @@ public class AddObject : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 10;
         return Camera.main.ScreenToWorldPoint(mousePos);
+    }
+
+    public void Substitui(GameObject go_subs) 
+    {
+        subs = true;
+        subsObj = go_subs;
     }
 }
