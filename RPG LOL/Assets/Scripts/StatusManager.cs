@@ -21,11 +21,19 @@ public class StatusManager : MonoBehaviour
     {
         _life.text = _input.text;
 
-        int life = int.Parse(_life.text);
-
-        if (life <= 0)
+        if (_life.text.Equals("") || _life.text.Equals(" "))
         {
             ChangeSprite();
+            _life.text = "0";
+        }
+        else
+        {
+            int life = int.Parse(_life.text);
+
+            if (life <= 0)
+            {
+                ChangeSprite();
+            }
         }
     }
 

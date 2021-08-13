@@ -7,13 +7,12 @@ public class zoom : MonoBehaviour
     [SerializeField] private float _speed = 10f;
     private float _x_Axis;
     private float _y_Axis;
-    public GameManager GM;
 
     public Camera cam;
 
     void Update()
     {
-        if (GM.isPaused == false)
+        if (GameManager.instance.isPaused == false)
         {
             if (Input.mouseScrollDelta.y < 0 && cam.orthographicSize < 12)
             {
@@ -34,7 +33,7 @@ public class zoom : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GM.isPaused == false)
+        if (GameManager.instance.isPaused == false)
         {
             _x_Axis = Input.GetAxisRaw("Horizontal");
             _y_Axis = Input.GetAxisRaw("Vertical");
