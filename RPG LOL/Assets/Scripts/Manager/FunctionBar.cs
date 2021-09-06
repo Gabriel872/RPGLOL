@@ -34,8 +34,6 @@ public class FunctionBar : MonoBehaviour
         _objectSelected = objectSelect;
     }
 
-    #region SetTag
-
     public void ChangeName(TMP_InputField inputName)
     {
         if (_objectSelected != null)
@@ -51,9 +49,6 @@ public class FunctionBar : MonoBehaviour
         }
     }
 
-    #endregion
-
-    #region SetLife
     public void ChangeLife(TMP_InputField inputLife)
     {
         if (inputLife != null && _objectSelected != null)
@@ -61,7 +56,6 @@ public class FunctionBar : MonoBehaviour
             _objectSelected.vida.text = inputLife.text;
         }
     }
-    #endregion
 
     #region +life or -life
 
@@ -116,10 +110,9 @@ public class FunctionBar : MonoBehaviour
     }
     #endregion
 
-    #region ChangeSprite
     public void ChangeSprite()
     {
-        if(counter < (_sprNPC.Count - 1))
+        if (counter < (_sprNPC.Count - 1))
         {
             counter++;
         }
@@ -132,17 +125,20 @@ public class FunctionBar : MonoBehaviour
         {
             case 0:
                 _objectSelected.spr.sprite = _sprNPC[0];
+                counter = 0;
                 break;
             case 1:
                 _objectSelected.spr.sprite = _sprNPC[1];
+                counter = 0;
                 break;
             case 2:
                 _objectSelected.spr.sprite = _sprNPC[2];
+                counter = 0;
                 break;
             default:
                 Debug.LogError("erro_spr");
+                counter = 0;
                 break;
         }
     }
-    #endregion
 }

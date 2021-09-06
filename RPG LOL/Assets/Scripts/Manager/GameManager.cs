@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -11,18 +12,30 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _actualLayer;
     [SerializeField] private GameObject _controlPanel;
 
+    [Space(20)]
+
+    public List<PlayerTest> playerArray = new List<PlayerTest>();
+    public List<StatusManager> playerUIArray = new List<StatusManager>();
+
+    [Space(20)]
+
     public GameObject cursorChaser;
     public GameObject addObjects;
+
+    [Space(20)]
 
     public bool isPaused;
     public bool editMode;
 
+    [Space(20)]
+
     public string[] a = new string[2];
     public string layer;
 
-    public int sortingLayer = 0;
-    private int count = 0;
+    [Space(10)]
 
+    private int count = 0;
+    public int sortingLayer = 0;
 
     private void Start()
     {
@@ -123,5 +136,23 @@ public class GameManager : MonoBehaviour
     public void quitApp()
     {
         Application.Quit();
+    }
+
+    public void AddPlayer(PlayerTest player, StatusManager playerUI)
+    {
+        if (playerArray.Count <= 5)
+        {
+            playerArray.Add(player);
+            playerUIArray.Add(playerUI);
+        }
+
+        if (playerArray.Count <= 6)
+        {
+            for (int i = 0; i < playerArray.Count; i++)
+            {
+                playerArray[i].id = i;
+                playerUIArray[i].id = i;
+            }
+        }
     }
 }

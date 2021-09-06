@@ -20,6 +20,24 @@ TextureImporter:
   - first:
       213: 3173019686368393809
     second: Personagens-RPG_5
+  - first:
+      213: -1538791605493051133
+    second: Personagens-RPG_0
+  - first:
+      213: -6341573131830647142
+    second: Personagens-RPG_1
+  - first:
+      213: -3119863751958653532
+    second: Personagens-RPG_2
+  - first:
+      213: 7794888446536010424
+    second: Personagens-RPG_3
+  - first:
+      213: 6762473594448514270
+    second: Personagens-RPG_4
+  - first:
+      213: 1080961169891369853
+    second: Personagens-RPG_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,19 +140,19 @@ TextureImporter:
       name: Personagens-RPG_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 48
-        width: 12
-        height: 15
+        width: 14
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9aac4345c34dba30800000000000000
-      internalID: 4232613739314850462
+      spriteID: 301db3b003d15aae0800000000000000
+      internalID: -1538791605493051133
       vertices: []
       indices: 
       edges: []
@@ -143,19 +161,19 @@ TextureImporter:
       name: Personagens-RPG_1
       rect:
         serializedVersion: 2
-        x: 13
+        x: 11
         y: 29
-        width: 12
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8514c180dbb67ce90800000000000000
-      internalID: -7005512235722456744
+      spriteID: a96a210f5d43ef7a0800000000000000
+      internalID: -6341573131830647142
       vertices: []
       indices: 
       edges: []
@@ -166,17 +184,17 @@ TextureImporter:
         serializedVersion: 2
         x: 29
         y: 28
-        width: 15
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a0e73e7027fb4060800000000000000
-      internalID: 6938911369822986402
+      spriteID: 4a513e4827404b4d0800000000000000
+      internalID: -3119863751958653532
       vertices: []
       indices: 
       edges: []
@@ -190,14 +208,14 @@ TextureImporter:
         width: 16
         height: 18
       alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      pivot: {x: 0.5, y: 0.44}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9eee437141b1296a0800000000000000
-      internalID: -6444058343711117591
+      spriteID: 8ba43973eb10d2c60800000000000000
+      internalID: 7794888446536010424
       vertices: []
       indices: 
       edges: []
@@ -206,19 +224,19 @@ TextureImporter:
       name: Personagens-RPG_4
       rect:
         serializedVersion: 2
-        x: 51
+        x: 50
         y: 48
-        width: 12
-        height: 15
+        width: 14
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be605beb7852eb810800000000000000
-      internalID: 1782903767435642603
+      spriteID: edc0010b7e129dd50800000000000000
+      internalID: 6762473594448514270
       vertices: []
       indices: 
       edges: []
@@ -231,15 +249,15 @@ TextureImporter:
         y: 8
         width: 16
         height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.44}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15a3f47e794d80c20800000000000000
-      internalID: 3173019686368393809
+      spriteID: d73ad53f478500f00800000000000000
+      internalID: 1080961169891369853
       vertices: []
       indices: 
       edges: []

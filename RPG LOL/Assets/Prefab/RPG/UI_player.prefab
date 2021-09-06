@@ -131,9 +131,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7667455891438576321}
+      - m_Target: {fileID: 6613524285881258465}
         m_TargetAssemblyTypeName: StatusManager, Assembly-CSharp
-        m_MethodName: ChangeLife
+        m_MethodName: UpdatePlayerUI
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7667455889852287300}
@@ -200,6 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7667455889937918946}
+  - component: {fileID: 6613524285881258465}
   m_Layer: 5
   m_Name: UI_player
   m_TagString: Untagged
@@ -225,9 +226,26 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 85.44, y: -30}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 170, y: 172.6}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6613524285881258465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667455889937918945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2916e6e586f54094fa1a49d12a279f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeField: {fileID: 7667455890950597219}
+  inputLife: {fileID: 7667455889852287300}
+  nameField: {fileID: 7667455890814844171}
+  inputName: {fileID: 7667455890916937977}
+  id: 0
 --- !u!1 &7667455890140170488
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +445,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Korphurat
+  m_text: 'Name
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -436,8 +456,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283256141
+  m_fontColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -615,6 +635,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6613524285881258465}
+        m_TargetAssemblyTypeName: StatusManager, Assembly-CSharp
+        m_MethodName: Rename
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7667455890916937977}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 7667455890916937975}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -622,18 +654,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7667455891027436262}
-        m_TargetAssemblyTypeName: ChangeNick, Assembly-CSharp
-        m_MethodName: Nick
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7667455890916937977}
-          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -674,7 +694,7 @@ MonoBehaviour:
       m_Calls: []
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
-  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0}
+  m_SelectionColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 0}
   m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
@@ -752,7 +772,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 28
+  m_text: '0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -833,7 +855,6 @@ GameObject:
   - component: {fileID: 7667455891027436261}
   - component: {fileID: 7667455891027436260}
   - component: {fileID: 7667455891027436259}
-  - component: {fileID: 7667455891027436262}
   m_Layer: 5
   m_Name: UI_player_btn_nick
   m_TagString: Untagged
@@ -883,15 +904,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f8f4ccf24023586489a529ef14ada982, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -955,32 +976,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 7667455891027436262}
-        m_TargetAssemblyTypeName: ChangeNick, Assembly-CSharp
-        m_MethodName: SetNull
-        m_Mode: 1
+      - m_Target: {fileID: 6613524285881258465}
+        m_TargetAssemblyTypeName: StatusManager, Assembly-CSharp
+        m_MethodName: setnull
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7667455891027436262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7667455891027436257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acfba9117dc7b3043a2cf0ae85855f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputNick: {fileID: 7667455890916937977}
-  _textNick: {fileID: 7667455890814844171}
 --- !u!1 &7667455891250197201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,7 +1063,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281479730
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.3019608, g: 0.3019608, b: 0.3019608, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1178,7 +1185,6 @@ GameObject:
   - component: {fileID: 7667455891438576320}
   - component: {fileID: 7667455891438575935}
   - component: {fileID: 7667455891438575934}
-  - component: {fileID: 7667455891438576321}
   m_Layer: 5
   m_Name: UI_player_btn_life
   m_TagString: Untagged
@@ -1300,10 +1306,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 7667455891438576321}
+      - m_Target: {fileID: 6613524285881258465}
         m_TargetAssemblyTypeName: StatusManager, Assembly-CSharp
-        m_MethodName: SetNull
-        m_Mode: 1
+        m_MethodName: setnull
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1312,22 +1318,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!114 &7667455891438576321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7667455891438575932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2916e6e586f54094fa1a49d12a279f54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _life: {fileID: 7667455890950597219}
-  _lifeInput: {fileID: 7667455889852287300}
-  _spriteRendPlayer: {fileID: 0}
-  _deathSprite: {fileID: -7204090467120934089, guid: 682cbb2c84bde2f4b9b04c6a08b6d1e1, type: 3}
 --- !u!1 &7667455891473004359
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class Gerador : MonoBehaviour
 {
-    public GameObject prefabAliado;
+    public GameObject prefabNPC;
     public GameObject prefabPlayer;
+    public GameObject prefabPlayerUI;
     public GameObject cam;
     public GameObject parent;
-    public GameManager GM;
+    public GameObject parentUI;
+
+    private GameManager GM;
 
     private Vector2 camPos;
+
+    private void Start()
+    {
+        GM = GameManager.instance;
+    }
 
     private void Update()
     {
@@ -19,20 +27,34 @@ public class Gerador : MonoBehaviour
 
         if (GM.isPaused == false)
         {
-            if (Input.GetKeyDown(KeyCode.C))
+            if (Input.GetKeyUp(KeyCode.C))
             {
-                SpawnBox();
+                SpawnNPC();
+            }
+
+            if (Input.GetKeyUp(KeyCode.G))
+            {
+                AddPlayerInScene();
             }
         }
     }
 
-    private void SpawnBox()
+    private void SpawnNPC()
     {
-        Instantiate(prefabAliado, gameObject.transform.position, Quaternion.identity, parent.transform);
+        Instantiate(prefabNPC, gameObject.transform.position, Quaternion.identity, parent.transform);
     }
 
     public void AddPlayerInScene()
     {
-        Instantiate(prefabPlayer, gameObject.transform.position, Quaternion.identity, parent.transform);
+        if(GM.playerArray.Count <= 5)
+        {
+            GameObject prefab = Instantiate(prefabPlayer, gameObject.transform.position, Quaternion.identity, parent.transform);
+            GM.AddPlayer(prefab.GetComponent<PlayerTest>(), prefabPlayerUI.GetComponent<StatusManager>());
+            Instantiate(prefabPlayerUI, parentUI.transform);
+        }
+        else
+        {
+            Debug.Log("Cheio");
+        }
     }
 }
